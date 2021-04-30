@@ -133,19 +133,3 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 .inspace-15{padding:15px;}
 .inspace-20{padding:20px;}
 .inspace-30{padding:30px;}
-
-/*Partnership###########################################*/
-* {
-  box-sizing: border-box;
-}
-
-img{border-radius: 20px 20px 20px 20px;
-	class:center;
-
-}
-img:hover{border: 4px solid #99EC52 ;}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
