@@ -53,7 +53,7 @@ File: Layout CSS
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:200px 0 270px;}/* 270px => 70px for #introblocks negative margin */
+#pageintro{padding: 0px 0 270px;}/* 270px => 70px for #introblocks negative margin */
 
 #pageintro article{display:block; max-width:55%;}
 #pageintro article p{line-height:2.5rem; font-size:1.6rem;}
@@ -95,11 +95,11 @@ File: Layout CSS
 #services .elements article > div{display:block; position:relative; min-height:60px; margin:0 0 30px 0; padding:12px 0 0 75px;}
 #services .elements article > div footer{position:absolute; top:0; left:0;}
 #services .elements article > p:first-of-type{line-height:1.6rem;}
-#services .elements article > p:last-of-type{margin-top:30px; padding-top:20px; text-align:center; font-weight:700; border-top:1px solid;}
+#services .elements article > p:last-of-type{margin-top:30px; padding-top:20px; text-transform:uppercase; text-align:center; font-weight:700; border-top:1px solid;}
 
 /* Shout */
 .shout{}
-.shout figure{display:block; padding: 20px;max-width:325px;/* same width as the image - contains the caption */}
+.shout figure{display:block; max-width:546px;/* same width as the image - contains the caption */}
 .shout figure img{}
 .shout figure figcaption{display:block; position:relative;}
 .shout figure figcaption a{display:block; position:relative; padding:15px; border:solid; border-width:0 1px 1px 1px;}
@@ -137,9 +137,9 @@ File: Layout CSS
 
 /* CTA - Click to action
 --------------------------------------------------------------------------------------------------------------- */
-#cta{padding:80px 0; text-align:center;}
+#cta{padding:50px 0; padding-bottom: 20px; text-align:center;}
 
-#cta p, #cta .heading, #cta footer{margin:0; padding:0;}
+#cta p, #cta .heading, #cta footer{margin:0; margin-bottom: 50px; padding:0;}
 #cta p:first-of-type{text-transform:uppercase;}
 #cta .heading{margin-bottom:50px; font-size:3rem;}
 #cta .heading span{font-size:4rem;}
@@ -233,7 +233,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
 
 /* Top Navigation */
-#mainav{}
+
 #mainav ul{text-transform:uppercase;}
 #mainav ul ul{position:absolute; width:180px; text-transform:none; z-index:9999;}
 #mainav ul ul ul{left:180px; top:0;}
@@ -242,7 +242,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav li li{width:100%; margin:0;}
 #mainav li a{display:block; padding:30px 0;}
 #mainav li li a{border:solid; border-width:0 0 1px 0;}
-#mainav .drop{padding-left:15px;}
+#mainav .drop{padding-left:15px; transition-duration: 1ms;}
 #mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
 #mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
 #mainav .drop::after{top:35px; left:5px;}
@@ -337,7 +337,6 @@ a:active, a:focus{background:transparent !important;}/* IE10 + 11 Bugfix - preve
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#B0CA35 !important;}
-
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
 .overlay.light{color:#474747;}
@@ -357,7 +356,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#B0CA35 !important;}
 /* Rows */
 .row0, .row0 a{}
 .row1{color:#FFFFFF; background-color:rgba(255,255,255,.4);}
-.row1:hover{color:#474747; background-color:#FFFFFF;}
+/*.row1:hover{color:#474747; background-color:#FFFFFF;}*/
 .row2{color:#474747; background-color:#F4F4F4;}
 .row3{color:#474747; background-color:#FFFFFF;}
 .row4{color:#A5A6AA; background-color:#000000;}
@@ -372,6 +371,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#B0CA35 !important;}
 
 /* Header */
 #header #logo a{color:inherit;}
+
+
 
 
 /* Page Intro */
@@ -393,6 +394,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#B0CA35 !important;}
 .shout figure:hover figcaption a, .shout figure figcaption a::after{color:#FFFFFF; background-color:#B0CA35; border-color:#B0CA35;}
 .shout figure:hover figcaption a::after{color:#B0CA35; background-color:#FFFFFF;}
 
+.greeting{position:absolute; margin-top: -400px; margin-left: 450px; width: 600px; height: 400px;}
+.coinlogo{width: 400px; height: 350px; margin-top: -60px; margin-left: -80px; margin-bottom: -80px;}
 
 /* Footer */
 #footer .heading{color:#FFFFFF;}
@@ -523,7 +526,6 @@ table a, #comments a{background-color:inherit;}
 	#footer .latestimg > li, #footer .latestimg > li:nth-last-child(-n+3){display:inline-block; float:none; width:auto; margin:0 5% 5% 0;}
 	#footer .latestimg > li:last-child{margin-bottom:0;}
 	#footer .latestimg > li img{width:auto;}
-
 }
 
 @media screen and (min-width:451px) and (max-width:900px){
@@ -541,19 +543,16 @@ table a, #comments a{background-color:inherit;}
 	.pr-charts .pr-chart-ctrl:last-child{margin-bottom:0;}
 }
 
-
 /* Other
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width:650px){
 	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
 	.scrollable table{margin:0; padding:0; white-space:nowrap;}
-
 	.inline li{display:block; margin-bottom:10px;}
 	.pushright li{margin-right:0;}
-
 	.font-x2{font-size:1.6rem;}
 	.font-x3{font-size:1.8rem;}
 }
+/*@media (min-width: 992px) .navbar.nav-sticky { padding: 10px 60px; background: #092a49;
+	.navbar.nav-sticky { position: fixed; top: 0; width: 100%; box-shadow: 0 2px 5px rgb(0 0 0 / 30%); transition: .5s;*/
 
-
- 
